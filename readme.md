@@ -1,6 +1,5 @@
 ### **README.md**
 
-````md
 # Ansible + Docker: Automating Ubuntu Server Management
 
 This repository sets up an **Ansible container** to manage multiple Ubuntu servers using **Docker Compose**. It automates SSH setup, user creation, and server management through Ansible.
@@ -23,7 +22,6 @@ Run the following command to build and start the Ansible and Ubuntu servers:
 ```sh
 docker-compose up -d --build
 ```
-````
 
 This will:
 ✅ Build the `ansible_container`  
