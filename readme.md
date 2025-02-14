@@ -1,5 +1,3 @@
-### **README.md**
-
 # Ansible + Docker: Automating Ubuntu Server Management
 
 This repository sets up an **Ansible container** to manage multiple Ubuntu servers using **Docker Compose**. It automates SSH setup, user creation, and server management through Ansible.
@@ -23,7 +21,7 @@ Run the following command to build and start the Ansible and Ubuntu servers:
 docker-compose up -d --build
 ```
 
-This will:
+This will:  
 ✅ Build the `ansible_container`  
 ✅ Set up `ubuntu1`, `ubuntu2`, `ubuntu3`  
 ✅ Mount your local `.ssh` folder into the Ansible container
@@ -38,7 +36,7 @@ After the containers are up, manually copy the SSH key to all Ubuntu servers:
 docker exec -it ansible_container sh -c "/executables/setup-ssh.sh"
 ```
 
-This will:
+This will:  
 ✅ Generate an SSH key (if missing)  
 ✅ Copy the SSH key to `ubuntu1`, `ubuntu2`, `ubuntu3`  
 ✅ Ensure passwordless SSH access
@@ -62,7 +60,7 @@ Once SSH is ready, execute the playbook:
 docker exec -it ansible_container sh -c "ansible-playbook -i /ansible_playbooks/inventory /ansible_playbooks/create_user.yml"
 ```
 
-This will:
+This will:  
 ✅ Create a user named `demouser` on all Ubuntu servers  
 ✅ Use `sudo` without a password (configured in Dockerfile)
 
@@ -133,15 +131,13 @@ Feel free to open issues or submit PRs to improve this setup! 🎯
 
 Created by **Ganesh NR** – because automation makes life easier! 🚀
 
-```
-
 ---
 
 ### **Why This README is Useful**
+
 ✅ **Step-by-step instructions** for both setup and manual steps
 ✅ **Explains why SSH needs manual execution**
 ✅ **Clear folder structure** for better repo organization
 ✅ **Easy troubleshooting & restart commands**
 
 Let me know if you want any modifications! 🚀
-```
