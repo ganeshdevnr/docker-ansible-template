@@ -130,14 +130,3 @@ Feel free to open issues or submit PRs to improve this setup! 🎯
 ## **💡 Author**
 
 Created by **Ganesh NR** – because automation makes life easier! 🚀
-
----
-
-### **Why This README is Useful**
-
-✅ **Step-by-step instructions** for both setup and manual steps
-✅ **Explains why SSH needs manual execution**
-✅ **Clear folder structure** for better repo organization
-✅ **Easy troubleshooting & restart commands**
-
-Let me know if you want any modifications! 🚀
