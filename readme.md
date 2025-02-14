@@ -127,6 +127,6 @@ Feel free to open issues or submit PRs to improve this setup! 🎯
 
 ---
 
-## **💡 Author**
+## **🧘 Author**
 
 Created by **Ganesh NR** – because automation makes life easier! 🚀
