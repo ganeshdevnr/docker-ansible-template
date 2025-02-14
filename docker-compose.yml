@@ -1,0 +1,54 @@
+version: "3"
+services:
+  ansible:
+    build:
+      context: . # Root context
+      dockerfile: dockerfiles/ansible.dockerfile
+    container_name: ansible_container
+    networks:
+      - ansible_network
+    volumes:
+      - ./.ssh:/root/.ssh # Use existing SSH keys
+      - ./ansible_playbooks:/ansible_playbooks # Playbooks
+      - ./executables:/executables # Mount executables folder
+    working_dir: /ansible_playbooks
+    depends_on:
+      - ubuntu1
+      - ubuntu2
+      - ubuntu3
+    tty: true
+    stdin_open: true
+
+  ubuntu1:
+    build:
+      context: . # Root context
+      dockerfile: dockerfiles/ubuntu.dockerfile
+    container_name: ubuntu1
+    networks:
+      - ansible_network
+    tty: true
+    stdin_open: true
+
+  ubuntu2:
+    build:
+      context: . # Root context
+      dockerfile: dockerfiles/ubuntu.dockerfile
+    container_name: ubuntu2
+    networks:
+      - ansible_network
+    tty: true
+    stdin_open: true
+
+  ubuntu3:
+    build:
+      context: . # Root context
+      dockerfile: dockerfiles/ubuntu.dockerfile
+    container_name: ubuntu3
+    networks:
+      - ansible_network
+    tty: true
+    stdin_open: true
+
+networks:
+  ansible_network:
+    driver: bridge

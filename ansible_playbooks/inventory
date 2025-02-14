@@ -1,0 +1,4 @@
+[ubuntu_servers]
+ubuntu1 ansible_user=ansible
+ubuntu2 ansible_user=ansible
+ubuntu3 ansible_user=ansible

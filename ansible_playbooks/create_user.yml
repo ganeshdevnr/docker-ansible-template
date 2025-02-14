@@ -1,0 +1,9 @@
+- name: Create a new user on all Ubuntu servers
+  hosts: ubuntu_servers
+  become: yes
+  tasks:
+    - name: Ensure demouser exists
+      user:
+        name: demouser
+        state: present
+        create_home: yes
